@@ -1,25 +1,28 @@
 {% extends 'base.html' %}
+{% block title %}{{ post.title }}{% endblock %}
 {% block content %}
     <div class="container">
     <div class="row">
         <div class="page-content single_content">
             <div class="col-md-9">
                 <div class="content_bx">
-                <img src="{{ post.photo.url }}" alt="{{ post.title }}">
-                <div class="meta">
-                    <span><i class="fa fa-clander-o"></i></span>
-                    <span><i class="fa fa-edit"></i></span>
-                </div>
-                <h1>{{ post.title }}</h1>
-                <hr>
-                <div class="p_text">
-                    {{ post.body }}
-                </div>
-                <div class="comments_box">
+                    <img class="post-img" src="{{ post.photo.url }}" alt="{{ post.title }}">
+                    <div class="meta">
+                        <span><i class="fa fa-calendar-o"></i>{{ post.date }}</span>
+                        <span><i class="fa fa-edit"></i>{{ post.author }}</span>
+                    </div>
+                    <h1 class="title">{{ post.title }}</h1>
+                    <div class="p_text">
+                        <p>
+                            {{ post.body }}
+                        </p>
+                    </div>
+                    <div class="comments_box">
                     
-                </div>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-3"></div>
         </div>
     </div>
     </div>
