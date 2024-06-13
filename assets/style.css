@@ -269,3 +269,17 @@ article p.desc{
     color: #fff;
     margin-left: 50px;
 }
+.delete-post span{
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+.delete-post form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.delete-post button{
+    width: 30%;
+}
