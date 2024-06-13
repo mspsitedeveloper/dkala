@@ -17,6 +17,10 @@
                             {{ post.body }}
                         </p>
                     </div>
+                    <div class="post_actions"> 
+                        <a href="{% url 'update_post' post.pk %}" class="post-action"><i class="fa fa-edit"></i>ویرایش</a>
+                        <a href="{% url 'delete_post' post.pk %}" class="post-action"><i class="fa fa-trash"></i>حذف</a>
+                     </div>
                     <div class="comments_box">
                     
                     </div>
