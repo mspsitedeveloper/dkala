@@ -162,3 +162,78 @@ header .row .col-md-3{
     font-size: 15px;
     color: #fff;
 }
+.page-content{
+    display: inline-block;
+    width: 100%;
+    margin: 30px 0;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+.single_content img{
+    display: table;
+    margin: 15px auto;
+    border-radius: 20px;
+}
+.single_content .meta{
+    font-size: 12px;
+    color: #777;
+    padding: 15px;
+    text-align: center;
+}
+.single_content .meta span{
+    margin-left: 15px;
+}
+.single_content .meta span a{
+    color: #333;
+}
+.single_content h1{
+    text-align: center;
+    line-height: 2;
+    color: #515151;
+    font-size: 18px !important;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.single_content .p_text p{
+    line-height: 2;
+    font-size: 15px;
+    color: #777;
+    margin: 15px 0;
+}
+.single_content .post_tags{
+    margin: 15px 0;
+    padding: 10px;
+    border:1px solid #eee;
+    border-radius: 20px;
+}
+.single_content .post_tags a{
+    display: inline-block;
+    padding: 2px 5px;
+    color: #fff;
+    background-color: #9be15d;
+    font-size: 12px;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+.index-blog .desc .meta{
+    padding: 15px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+}
+.index-blog .desc .mata span{
+    margin-left: 15px;
+}
+.btn-site{
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #9be15d;
+    background-image: linear-gradient(269deg,#00d9a6 0%,#9be15d 100%);
+    transition: all 0.3s ease;
+}
+.btn-site:hover{
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}

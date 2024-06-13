@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% block title %}مقاله جدید{% endblock %}
 {% block content %}
 <div class="new-post">
-    <form method="post" data-aos="fade-up">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {% for field in form %}
             <div>
@@ -19,6 +20,7 @@
                     <label for="id_photo">عکس</label>
                 {% endif %}
                 {{ field }}
+                {{ field.errors }}
             </div>
         {% endfor %}
         <button type="submit" class="btn-publish">انتشار</button>

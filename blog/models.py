@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import date
+
 class Post(models.Model):
     title = models.CharField(max_length=50)
     abstract = models.TextField()

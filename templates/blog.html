@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}وبلاگ{% endblock %}
+{% block content %}
+<section class="posts">
+    <div class="row">
+        {% for post in post_list %}
+            <article class="col-md-3">
+                <img src="{{ post.photo.url }}" alt="{{ post.title }}">
+                <h2>{{ post.title }}</h2>
+                <div class="meta">
+                    <span><i class="fa fa-calendar-o"></i>{{ post.date }}</span>&nbsp;&nbsp;
+                    <span><i class="fa fa-edit"></i>{{ post.author }}</span>&nbsp;&nbsp;
+                </div>
+                <p>{{ post.abstract }}</p>
+                <a href="{% url 'single' post.pk %}" class="btn-site">ادامه</a>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

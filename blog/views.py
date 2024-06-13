@@ -1,10 +1,15 @@
-from django.views.generic import TemplateView , CreateView
+from django.views.generic import DetailView , CreateView , ListView
 from django.urls import reverse_lazy
 from .models import Post
 from .forms import PostForm
 
-class Home(TemplateView):
-    template_name = 'home.html'
+class Home(ListView):
+    model = Post
+    template_name = 'blog.html'
+
+class Single(DetailView):
+    model = Post
+    template_name = 'single.html'
 
 class NewPost(CreateView):
     template_name = 'new_post.html'
