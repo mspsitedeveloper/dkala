@@ -4,7 +4,7 @@ from .views import (
     NewPost ,
     Single ,
     DeletePost ,
-    UpdatePost
+    UpdatePost,
 )
 urlpatterns = [
     path('', Home.as_view(), name='home'),
