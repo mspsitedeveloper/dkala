@@ -349,3 +349,6 @@ article p.desc{
 .not-found span{
     font-size: 50px;
 }
+#id_title{
+    width: 100%;
+}

@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 {% block title %}{{ post.title }}{% endblock %}
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="">خانه</a></li>
+<i class="fa fa-angle-right" aria-hidden="true"></i>
+<li class="breadcrumb-item active"><a href="">{{ post.title }}</a></li>
+{% endblock %}
 {% block content %}
     <div class="container">
         <div class="page-content single_content">

@@ -1,3 +1,4 @@
+from django.forms import BaseModelForm
 from django.http import HttpResponse
 from django.views.generic import DetailView , CreateView , ListView ,View , FormView
 from django.views.generic.edit import UpdateView , DeleteView
@@ -11,7 +12,7 @@ from django.core.paginator import Paginator
 class Home(View):
     model = Post
     template_name = 'blog.html'
-    paginate_by = 4
+    paginate_by = 3
 
     def get(self, request):
         posts = Post.objects.all()
@@ -61,11 +62,15 @@ class Single(View):
         return view(request, *args , **kwargs)
 
 class NewPost(CreateView):
-    template_name = 'new_post.html'
-    form_class = PostForm
-    success_url = reverse_lazy('home')
     model = Post
-
+    form_class = PostForm
+    template_name = 'new_post.html'    
+    def form_valid(self, form):
+        post = form.save(commit=False)
+        post.author = self.request.user
+        post.abstract = post.body[:100]
+        post.save()
+        return super().form_valid(form)
 class UpdatePost(UpdateView):
     model = Post
     template_name = 'update_post.html'
